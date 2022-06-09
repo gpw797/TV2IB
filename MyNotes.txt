@@ -1,0 +1,7 @@
+ib.connect('127.0.0.1', 7496, clientId=13)
+
+contract = Contract(conId=477837011)
+ib.qualifyContracts(contract)
+order = MarketOrder('SELL', 1)
+
+trade = ib.placeOrder(contract, order)
